@@ -10,9 +10,11 @@ import sys
 import time
 import subprocess
 
+import os
+
 app = Flask(__name__)
-ACCESS_TOKEN = 'EAAEEcTiDZAYkBADeLoLBoPFyJCQMwKTbXoccY28DEgChCkjVD58zZBCbQHXxj8eWNZB2dqErZCwZBJDAm3tN6ZAtj6QZAEq989RLsM0ZA3umiRoVnsMaB8koeUyqMcVkmvmJU2bmDbGI5g0cpPNQdPBKadTfpiuNENsIaMJHqpIv8AZDZD'
-VERIFY_TOKEN = 'eraumavez'
+ACCESS_TOKEN = os.environ['EAAEEcTiDZAYkBADeLoLBoPFyJCQMwKTbXoccY28DEgChCkjVD58zZBCbQHXxj8eWNZB2dqErZCwZBJDAm3tN6ZAtj6QZAEq989RLsM0ZA3umiRoVnsMaB8koeUyqMcVkmvmJU2bmDbGI5g0cpPNQdPBKadTfpiuNENsIaMJHqpIv8AZDZD']
+VERIFY_TOKEN = os.environ['eraumavez']
 bot = Bot(ACCESS_TOKEN)
 
 @app.route("/", methods=['GET', 'POST'])
